@@ -12,6 +12,7 @@ router.post('/registration', [
 
 router.post('/login', controller.login)
 
+// we use authMiddleware to check if user with given role is allowed to view /users route.
 router.get('/users',authMiddleware, controller.getUsers)
 
 module.exports = router;
